@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="uvc_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="FRW_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="FRW">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="FRW_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RRW_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RRW">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="RRW_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RLW_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RLW">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="RLW_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="FLW_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="FLW">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="FLW_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

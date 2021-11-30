@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<robot name="uvc_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find uvc_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find uvc_urdf_description)/urdf/uvc_urdf.gazebo" />
+<link name="ebot_base">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.2941067702045452 0.364614547558235 0.10653803373518483"/>
+    <mass value="385.8480835196417"/>
+    <inertia ixx="8.050539" ixy="0.0" ixz="0.757727" iyy="14.074564" iyz="-0.0" izz="15.896639"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/ebot_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/ebot_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.99186391403839e-08 -4.5244176483105747e-07 0.009999906470253561"/>
+    <mass value="0.3020463813474771"/>
+    <inertia ixx="5.6e-05" ixy="0.0" ixz="0.0" iyy="5.6e-05" iyz="0.0" izz="9.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.161812 -0.364615 -0.303208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.161812 -0.364615 -0.303208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="realsense_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010000331939484464 -4.5244176494207977e-07 -9.352974644771805e-08"/>
+    <mass value="0.3140000000000004"/>
+    <inertia ixx="0.000272" ixy="0.0" ixz="0.0" iyy="2.1e-05" iyz="0.0" izz="0.000272"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.134262 -0.364615 -0.293208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/realsense_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.134262 -0.364615 -0.293208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/realsense_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.1625997972525282e-06 0.017468514014645553 -7.103997127222428e-07"/>
+    <mass value="5.321454736767083"/>
+    <inertia ixx="0.013359" ixy="0.0" ixz="-0.0" iyy="0.026172" iyz="-0.0" izz="0.013359"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.104262 -0.139615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.104262 -0.139615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.1625997972108948e-06 0.01746851401464572 -7.103997135479712e-07"/>
+    <mass value="5.321454736767083"/>
+    <inertia ixx="0.013359" ixy="0.0" ixz="-0.0" iyy="0.026172" iyz="-0.0" izz="0.013359"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.464262 -0.139615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.464262 -0.139615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.1625997974884505e-06 -0.017531485985354367 -7.103997135202156e-07"/>
+    <mass value="5.321454736767083"/>
+    <inertia ixx="0.013359" ixy="0.0" ixz="-0.0" iyy="0.026172" iyz="-0.0" izz="0.013359"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.464262 -0.589615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.464262 -0.589615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.162599797585595e-06 -0.01753148598535459 -7.103997126112205e-07"/>
+    <mass value="5.321454736767083"/>
+    <inertia ixx="0.013359" ixy="0.0" ixz="-0.0" iyy="0.026172" iyz="-0.0" izz="0.013359"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.104262 -0.589615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.104262 -0.589615 -0.043208"/>
+    <geometry>
+      <mesh filename="package://uvc_urdf_description/meshes/FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="LIDAR" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.161812 0.364615 0.303208"/>
+  <parent link="ebot_base"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="REALSENSE" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.134262 0.364615 0.293208"/>
+  <parent link="ebot_base"/>
+  <child link="realsense_1"/>
+</joint>
+
+<joint name="FRW" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.104262 0.139615 0.043208"/>
+  <parent link="ebot_base"/>
+  <child link="FR_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="RRW" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.464262 0.139615 0.043208"/>
+  <parent link="ebot_base"/>
+  <child link="RR_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="RLW" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.464262 0.589615 0.043208"/>
+  <parent link="ebot_base"/>
+  <child link="RL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="FLW" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.104262 0.589615 0.043208"/>
+  <parent link="ebot_base"/>
+  <child link="FL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+</robot>
