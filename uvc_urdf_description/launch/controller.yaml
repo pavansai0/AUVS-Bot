@@ -1,0 +1,23 @@
+uvc_urdf_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  FRW_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FRW
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RRW_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RRW
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RLW_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RLW
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  FLW_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FLW
+    pid: {p: 100.0, i: 0.01, d: 10.0}
